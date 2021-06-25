@@ -4,6 +4,7 @@ from pathlib import Path
 import sys
 
 import yaml
+from yaml import SafeDumper
 
 from dbt.task.base import get_nearest_project_dir
 
@@ -85,6 +86,12 @@ def write_yaml(location, data):
     :return: None
     """
     try:
+        # This allows dumping keys without a value
+        SafeDumper.add_representer(
+            type(None),
+            lambda dumper, value: dumper.represent_scalar(u'tag:yaml.org,2002:null', '')
+        )
+
         with open(location, 'w') as stream:
             yaml.safe_dump(data, stream, sort_keys=False)
     except yaml.YAMLError as exc:

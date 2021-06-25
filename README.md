@@ -58,12 +58,12 @@ pip install dbt-invoke
       version: 2
       models:
       - name: users
-        description: ''
+        description:
         columns:
         - name: user_id
-          description: ''
+          description:
         - name: created_at
-          description: ''
+          description:
       ```
 
   

@@ -5,66 +5,66 @@ expected_properties:
     version: 2
     analyses:
       - name: revenue_by_daily_cohort
-        description: ''
+        description:
         columns:
           - name: created_on
-            description: ''
+            description:
           - name: total_revenue
-            description: ''
+            description:
   models/marts/core/customers.yml:
     version: 2
     models:
       - name: customers
-        description: ''
+        description:
         columns:
           - name: customer_id
-            description: ''
+            description:
           - name: created_at
-            description: ''
+            description:
   models/marts/core/orders.yml:
     version: 2
     models:
       - name: orders
-        description: ''
+        description:
         columns:
           - name: order_id
-            description: ''
+            description:
           - name: customer_id
-            description: ''
+            description:
           - name: item_id
-            description: ''
+            description:
           - name: quantity
-            description: ''
+            description:
           - name: order_at
-            description: ''
+            description:
   data/items.yml:
     version: 2
     seeds:
       - name: items
-        description: ''
+        description:
         columns:
           - name: item_id
-            description: ''
+            description:
           - name: price
-            description: ''
+            description:
           - name: updated_at
-            description: ''
+            description:
   snapshots/items_snapshot.yml:
     version: 2
     snapshots:
       - name: items_snapshot
-        description: ''
+        description:
         columns:
           - name: item_id
-            description: ''
+            description:
           - name: price
-            description: ''
+            description:
           - name: updated_at
-            description: ''
+            description:
           - name: dbt_valid_from
-            description: ''
+            description:
           - name: dbt_valid_to
-            description: ''
+            description:
 
 expected_dbt_ls_results:
   resource_type:

@@ -564,7 +564,7 @@ def _get_property_header(resource, resource_type):
     header_dict = {
         'version': 2,
         _SUPPORTED_RESOURCE_TYPES[resource_type]: [
-            {'name': resource, 'description': "", 'columns': []}
+            {'name': resource, 'description': None, 'columns': []}
         ],
     }
     return header_dict
@@ -577,7 +577,7 @@ def _get_property_column(column_name):
     :param column_name: Name of column
     :return: A dictionary representing column properties
     """
-    column_dict = {'name': column_name, 'description': ""}
+    column_dict = {'name': column_name, 'description': None}
     return column_dict
 
 
